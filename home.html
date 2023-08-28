@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>travelling website home page clone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <!--for icons-->
+     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+     <link
+     rel="stylesheet"
+     href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"/>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+   />
+   
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+     <!-- Required meta tags -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        color: black;
+    }
+    a{
+        text-decoration: none;
+    }
+    ul{
+        list-style: none;
+    }
+    .flex{
+        display: flex;
+    }
+    .container{
+        max-width: 1280px;
+        margin-inline: auto;
+        overflow: hidden;
+    }
+    .main-nav{
+        justify-content: space-between;
+        padding: 20px 0;
+        
+    }
+    .logo img{
+        width: 80px;
+    }
+    .nav-links ul{
+        gap: 30px;
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .hover-link{
+        cursor: pointer;
+    }
+    .hover-link:hover{
+        color: brown;
+    }
+    .hover-link:active{
+        color: rgb(60, 10, 10);
+    }
+    .options li{
+        height: 19px;
+        padding: 0 10px;
+        font-size: 21px;
+        border-radius: 5px;
+    }
+    .sign-up{
+        width: 80px;
+        height: 25px;
+        margin: 5px;
+        border: solid black 1px;
+        border-radius: 4px;
+        font-size: 14px;
+        font-weight: 400;
+        background: #f60;
+        cursor: pointer;
+    }
+    .sign-up:hover{
+        background-color: brown;
+    }
+    .first{
+        display: flex;
+        justify-content: space-around;
+        margin: 15px;
+    }
+    .first div{
+        width: 30%;
+
+    }
+    .right img{
+         width: 80%;
+         
+    }
+    .left #bold1{
+        margin: 60px 20px 0 0;
+        font-size: 15px;
+        font-weight: 400;
+        color: rgb(240, 25, 25);
+    }
+    .left #bold2{
+        font-size: 60px;
+        font-weight: 700;
+        margin:10px;
+    }
+    .left #bold3{
+        font-size: 18px;
+        line-height: 30px;
+    }
+    .left .btns{
+        margin: 30px 0;
+        display: flex;
+        gap: 30px;
+    }
+    .btns .find-more{
+        border-radius: 4px;
+        width: 140px;
+        height: 40px;
+        font-size: 14px;
+        color: white;
+        background: #f60;
+        border: #f60;
+    }
+    .play-demo{
+         width: 40px;
+         height: 40px;
+         background: #f60;
+         color: #fff;
+         border: #f60;
+         border-radius: 100%;
+    }
+    .btns play{
+        font-size: 10px;
+    }
+    .play-demo:hover{
+        cursor: pointer;
+        background: red;
+    }
+    .find-more:hover{
+        background: red;
+        cursor: pointer;
+    }
+  
+    .container-main{
+        margin: 40px 40px;
+        padding: 20px;
+    }
+    .container-main .card{
+        border-radius: 18px;
+    }
+    .container-main #category{
+        justify-content: centre;
+        align-items: centre;
+        font-size: 40px;
+        font-weight: 500;
+    }
+    .container2 .places{
+        justify-content: centre;
+        align-items: centre;
+        font-size: 40px;
+        font-weight: 500;
+        margin: 20px;
+    }
+    /*dd*/
+    .container2 .card{
+        width: 487px;
+        height: 500px;
+        border-radius: 18px;
+    }
+    .second{
+        display: flex;
+        justify-content: space-around;
+        margin: 300px;
+    }
+    .second div{
+        width: 30%;
+    }
+    .right1 img{
+        width: 90%;
+    }
+    #img2{
+        width: 500px;
+        height: 300px;
+    }
+    .second #b1{
+        font-size: 20px;
+        font-weight: 400;
+        color: rgb(68, 66, 66);
+    }
+    .second #b2{
+        font-size: 30px;
+        font-weight: 500;
+    }
+    .second #lists{
+           font-weight: 500;
+           color: rgb(63, 60, 60);
+    }
+    
+    .second #img3{
+        width: 200px;
+        height: 150px;
+    }
+    #cardbtn{
+        background:#f60;
+    }
+    .card:hover{
+        background-color: plum;
+    }
+    
+    /*code for responsiveness*/
+    @media screen and (max-width:800px){
+      .first{
+        flex-direction: column-reverse;
+      }
+      .main-nav{
+        flex-direction: column;
+        
+      }
+      body {
+        min-width: fit-content;
+      }
+    }
+     #logo3{
+        margin: 0;
+     }
+   #cardtext{
+    color: rgb(10, 10, 10);
+   }
+  
+    
+</style>
+<body>
+    <div class="main-nav container flex">
+        
+        <a href="#" class="logo">
+            <img src="jadoo.png" alt="logo">
+        </a>
+        <!---->
+        <i class="bi bi-brightness-high-fill" id="toggledark"></i>
+        <div class="nav-links">
+        <ul class="flex">
+            <li class="hover-link nav-item">Destinations</li>
+            <li class="hover-link nav-item">Hotels</li>
+            <li class="hover-link nav-item">flights</li>
+            <li class="hover-link nav-item">Bookings</li>
+            <li class="hover-link nav-item">Login</li>
+            <li><button class="sign-up">sign up</button></li>
+            <li class="wrapper">
+                <div class="searchbutton"><span>EN
+                    <i class="uil uil-angle-down"></i>
+                    <!--<div class="content">
+                        <div class="search">
+                            <i class="uil uil-search"></i>
+                            <input type="text" placeholder="search">
+                        </div>
+                        <ul class="options">
+                            
+                        </ul>-->
+                    </div>
+                </span></div>
+            </li>
+    
+        </div>
+</div>
+<main>
+    <section class="first">
+        <div class="left">
+            <p id="bold1">BEST DESTINATION AROUND THE WORLD </p> <br>
+                <p id="bold2">Travel,enjoy and live a new and full life </p> <br>
+                <p id="bold3">Built Wicket longer admire do barton vanity itself do in it.
+                Preferred to sportsman it engrossed listening.Park gate sell they westhard for the.</p>
+            <ul class="btns">
+                <li><button class="find-more">Find out more</button></li>
+                <li><button class="play-demo">
+                    <i class="uil uil-play"></i>
+                </button></li>
+                <li class="play"><p>play demo</p></li>
+            </ul>
+            
+        </div>
+        <div class="right">
+            <img src="trv.png" alt="">
+        </div>
+    </section>
+</main>
+
+<div class="container-main">
+    
+        <p id="category">We Offer Best services</p>
+    
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card" style="width: 18rem;">
+                <img src="weather.jpeg" class="card-img-top" id="cardimg" alt="...">
+                <div class="card-body" id="cardtext">
+                  <h5 class="card-title">calculated weather</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary" id="cardbtn">Go somewhere</a>
+                </div>
+              </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card" style="width: 18rem;">
+                <img src="plane1.jpeg" class="card-img-top" id="cardimg" alt="...">
+                <div class="card-body" id="cardtext">
+                  <h5 class="card-title">Best flights</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary" id="cardbtn">Go somewhere</a>
+                </div>
+              </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card" style="width: 18rem;">
+                <img src="event.jpeg" class="card-img-top" id="cardimg" alt="...">
+                <div class="card-body" id="cardtext">
+                  <h5 class="card-title">Local Events</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary" id="cardbtn">Go somewhere</a>
+                </div>
+              </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card" style="width: 18rem;">
+                <img src="custom.png" class="card-img-top" id="cardimg" alt="...">
+                <div class="card-body" id="cardtext">
+                  <h5 class="card-title">Customization</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary" id="cardbtn">Go somewhere</a>
+                </div>
+              </div>
+        </div>
+    </div>
+    
+        
+
+</div>
+<main>
+<div class="container2">
+    <p class="places">Top Destinations</p>
+      <div class="row">
+       <div class="col-md-4">
+        <div class="card" >
+            <img src="italy11.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Rome,italy</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary" id="cardbtn">Go somewhere</a>
+            </div>
+          </div>
+       </div>
+       <div class="col-md-4">
+        <div class="card" >
+            <img src="london11.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">London,UK</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary" id="cardbtn">Go somewhere</a>
+            </div>
+          </div>
+       </div>
+       <div class="col-md-4">
+        <div class="card">
+            <img src="eurpe11.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Full Europe</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary" id="cardbtn">Go somewhere</a>
+            </div>
+          </div>
+       </div>
+      </div>
+ </div>
+ </main>
+<main>
+    <section class="second">
+        <div class="left1">
+           <p id="b1">Easy and Fast</p><br>
+           <p id="b2">Book Your Next Trip in 3 Easy Steps</p><br>
+           <p id="lists">Choose Destination <br><p id="content">Lorem ipsum dolor sit amet consectetur
+             adipisicing elit. Eveniet, suscipit.</p> </p>
+             <p id="lists">Make Payment <br><p id="content">Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Eveniet, suscipit.</p> </p>
+                <p id="lists">Reach Airport on selected date <br><p>Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Eveniet, suscipit lorem dolor ipsum</p> </p>
+        </div>
+        <div class="right1">
+              <img src="destination.jpg" alt="" id="img2"><br>
+              <p id="lists">Trip to Greece</p><br>
+              <p id="lists">14-29 june | by Robbin</p><span><img src="rightimg.png" alt="" id="img3"></span>
+
+        </div>
+    </section>
+ </main>
+ <main> 
+    <img src="logoss.png" alt="" id="logo2">
+ </main>
+
+<script>
+    /*for dark mode*/
+    const toggle = document.getElementById("toggledark");
+      const body = document.querySelector("body");
+      toggle.addEventListener("click", function () {
+        this.classList.toggle("bi-moon");
+        if (this.classList.toggle("bi-brightness-high-fill")) {
+          body.style.background = "white";
+          body.style.color = "black";
+          body.style.transition = "2s";
+        }
+         else {
+          body.style.background = "black";
+          body.style.color = "white";
+          body.style.transition = "2s";
+        }
+      });
+</script>
+</body>
+</html>
